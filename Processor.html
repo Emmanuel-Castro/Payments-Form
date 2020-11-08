@@ -1,0 +1,132 @@
+<html>
+  <body>
+
+    <h1>Payments Form</h1>
+
+    <form>
+
+      <p>Debit Card</p>
+
+      <div class="first">
+      <label>First Name</label>
+      <br>
+      <input type="text" id="first">
+      </div>
+
+      <div class="last">
+      <label>Last Name</label>
+      <br>
+      <input type="text" id="last">
+      </div>
+
+      <div class="card">
+      <label>Card Number</label>
+      <br>
+      <input type="text" id="card">
+      </div>
+
+      <div class="amount">
+      <label>Amount</label>
+      <br>
+      <input type="text" id="quantity">
+      </div>
+
+      <div class="currency">
+      <label>Currency</label>
+      <br>
+      <select id="curr">
+          <option value="USD">US Dollar</option>
+          <option value="EUR">Euro</option>
+          <option value="GBP">Sterling Pound</option>
+          <option value="BRL">Brazilian Real</option>
+          <option value="MXN">Mexican Peso</option>
+      </select>
+      </div>
+
+      <div class="convCurrency">
+      <label>Conversion Currency</label>
+      <br>
+      <select id="convCurr">
+          <option value="USD">US Dollar</option>
+          <option value="EUR">Euro</option>
+          <option value="GBP">Sterling Pound</option>
+          <option value="BRL">Brazilian Real</option>
+          <option value="MXN">Mexican Peso</option>
+      </select>
+      </div>
+
+      <input type="button" class="btn" id="mybtn" value="Pay" onclick="processPay();">
+    </form>
+
+    <div id="security"></div>
+    <br>
+    <div id="dataInput"></div>
+
+  </body>
+</html>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: 'Kanit', sans-serif;
+  background-size: 100vw, 100vh;
+  background-attachment: fixed;
+}
+
+form {
+  text-align: center;
+  margin-left: 300px;
+  margin-right: 300px;
+  border: solid 3.5px black;
+  border-radius: 5px;
+}
+
+p {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  text-align: center;
+}
+
+div {
+  margin: 15px;
+}
+
+div.currency, div.convCurrency {
+  margin: 30px;
+}
+
+input {
+  text-align: center;
+  border: solid 1px black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+}
+
+select {
+  font-size: 20px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+input.btn {
+  font-size: 20.5px;
+  font-weight: bold;
+  padding: 10px;
+  padding-left: 65px;
+  padding-right: 65px;
+  margin: 20px;
+}
+</style>
+
+<script src="Debit Intl.js"></script>
